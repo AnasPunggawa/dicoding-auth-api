@@ -18,9 +18,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
+            source ~/.bashrc
             cd ~/dicoding/dicoding-auth-api
             git pull origin main
             npm install
             npm run migrate up
-            npm run start:prod
-            # pm2 restart auth-api
+            pm2 restart auth-api
