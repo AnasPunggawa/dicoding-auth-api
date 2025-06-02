@@ -5,7 +5,7 @@ const container = require('../../container');
 const createServer = require('../createServer');
 const AuthenticationTokenManager = require('../../../Applications/security/AuthenticationTokenManager');
 
-describe('HTTP server', () => {
+describe('HTTP server endpoints', () => {
   afterEach(async () => {
     await UsersTableTestHelper.cleanTable();
     await AuthenticationsTableTestHelper.cleanTable();
