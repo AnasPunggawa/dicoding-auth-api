@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   pull_request:
-    branches: -master
+    branches: -main
 
 jobs:
   test:
@@ -18,7 +18,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres1357916
-          POSTGRES_DB: forumapi_test
+          POSTGRES_DB: authapi_test
 
         options: >-
           --health-cmd pg_isready
@@ -42,12 +42,12 @@ jobs:
         env:
           CI: true
           HOST: localhost
-          PORT: 3000
+          PORT: 5000
           PGHOST: localhost
           PGPORT: 5432
           PGUSER: postgres
           PGPASSWORD: postgres1357916
-          PGDATABASE: forumapi_test
+          PGDATABASE: authapi_test
           ACCESS_TOKEN_KEY: secret
           REFRESH_TOKEN_KEY: terces
           ACCESS_TOKEN_AGE: 3600
