@@ -18,7 +18,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            source ~/.bashrc
+            export NVM_DIR="$HOME/.nvm"
+            source "$NVM_DIR/nvm.sh"
+            nvm use 22
+
             cd ~/dicoding/dicoding-auth-api
             git pull origin main
             npm install
