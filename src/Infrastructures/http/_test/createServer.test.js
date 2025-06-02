@@ -30,7 +30,7 @@ describe('HTTP server endpoints', () => {
   });
 
   describe('when GET /', () => {
-    it('should return 200 and hello world', async () => {
+    it('should response 200 and hello world', async () => {
       // Arrange
       const server = await createServer({});
 
