@@ -1,4 +1,4 @@
-name: Continuous Integration Dicoba
+name: Continuous Integration
 
 on:
   pull_request:
